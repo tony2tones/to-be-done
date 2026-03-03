@@ -10,4 +10,5 @@ import { GreetingComponent } from "./components/greeting/greeting.component";
 })
 export class AppComponent {
   title = 'todoListApp';
+  
 }
