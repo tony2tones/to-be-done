@@ -1,1 +1,20 @@
 <p>Welcome {{ name() }}!</p>
+  <form [formGroup]="todoForm" (ngSubmit)="addToDo()">
+    <input formControlName="text" placeholder="What needs doing?" />
+    <div class="container">
+        <button (click)="clearAll()">Clear all</button>
+        <button type="submit" [disabled]="todoForm.invalid">Add To do</button>
+    </div>
+</form>
+
+
+@if(todoList().length === 0) {
+    <div>No todos have been set just yet</div>
+} 
+
+    @for (item of todoList(); track item.id) {
+        <app-to-do-list-item [todo]='item' (deletedToDoId)="removeToDo($event)" />
+    }
+
+
+
