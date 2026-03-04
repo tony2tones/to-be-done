@@ -1,0 +1,18 @@
+.text-input {
+    display: flex;
+    gap: 3;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 2rem;
+    flex-direction: column;
+}
+
+.label {
+    padding-bottom: 5px;
+}
+
+.input-styles {
+    padding:5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 9px;
+}

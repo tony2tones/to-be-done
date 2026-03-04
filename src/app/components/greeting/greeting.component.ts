@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { Todo } from '../../models';
 import { ToDoListItemComponent } from '../to-do-list-item/to-do-list-item.component';
  import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { TextInputComponent } from '../ui/text-input/text-input.component';
 
 @Component({
   selector: 'app-greeting',
-  imports: [ToDoListItemComponent, ReactiveFormsModule],
+  imports: [ToDoListItemComponent, ReactiveFormsModule, TextInputComponent],
   templateUrl: './greeting.component.html',
   styleUrl: './greeting.component.scss',
 })
@@ -26,7 +27,7 @@ export class GreetingComponent {
           status: false
         }
         ]);
-    
+    this.todoForm.controls['text'].setValue('');
   }
 
   clearAll() {
