@@ -1,6 +1,6 @@
 <p>Welcome {{ name() }}!</p>
   <form [formGroup]="todoForm" (ngSubmit)="addToDo()">
-    <input formControlName="text" placeholder="What needs doing?" />
+    <app-text-input [control]='todoForm.controls.text' label="Add a to do" placeholderText="What needs doing?" />
     <div class="container">
         <button (click)="clearAll()">Clear all</button>
         <button type="submit" [disabled]="todoForm.invalid">Add To do</button>
