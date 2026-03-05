@@ -27,7 +27,7 @@ export class GreetingComponent {
           status: false
         }
         ]);
-    this.todoForm.controls['text'].setValue('');
+    this.todoForm.controls.text.reset();
   }
 
   clearAll() {
