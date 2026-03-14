@@ -10,11 +10,12 @@
 
 @if(todoList().length === 0) {
     <div>No todos have been set just yet</div>
-} 
-
+} @else {
     @for (item of todoList(); track item.id) {
         <app-to-do-list-item [todo]='item' (deletedToDoId)="removeToDo($event)" />
     }
+}
+
 
 
 

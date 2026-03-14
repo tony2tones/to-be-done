@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { Todo } from '../../models';
 
 @Component({
@@ -6,6 +6,7 @@ import { Todo } from '../../models';
   imports: [],
   templateUrl: './to-do-list-item.component.html',
   styleUrl: './to-do-list-item.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToDoListItemComponent {
    todo = input.required<Todo>();
