@@ -4,11 +4,11 @@ import { CountryListComponent  } from './features/country-list/country-list.comp
 
 export const routes: Routes = [
     {
-        path: '/', 
+        path: '', 
         component: AppComponent, 
     },
     {
-        path: '/country-list', 
+        path: 'country-list', 
         component: CountryListComponent, 
     },
 

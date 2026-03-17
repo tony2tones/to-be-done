@@ -1,1 +1,10 @@
 <p>country-list works!</p>
+
+@if( countries$ | async ) {
+    @for(country of countries$ | async; track country.cca3) {
+        <div>
+            {{country.population}}
+            {{country.name}}
+        </div>
+    }
+}
