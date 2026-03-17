@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { CountriesService } from '../../core/services/countries.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-country-list',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './country-list.component.html',
   styleUrl: './country-list.component.scss',
 })
-export class CountryListComponent {
+export class CountryListComponent implements OnInit {
+  countriesList = inject(CountriesService);
+  countries$ = this.countriesList.getCountries();
+
+  ngOnInit(): void {
+    // this.countriesList.getCountries();
+    this.countries$.subscribe();
+  }
 
 }
